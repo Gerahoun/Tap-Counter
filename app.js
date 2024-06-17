@@ -35,12 +35,18 @@ function spinWheel() {
     }
 }
 
-canvas.addEventListener('mousedown', () => {
+function startSpin() {
     if (!wheel.isSpinning) {
         wheel.spinSpeed = 0.2 + Math.random() * 0.3; // Random spin speed
         wheel.isSpinning = true;
         spinWheel();
     }
+}
+
+canvas.addEventListener('mousedown', startSpin);
+canvas.addEventListener('touchstart', (e) => {
+    e.preventDefault(); // Prevent scrolling when touching the canvas
+    startSpin();
 });
 
 drawWheel();
