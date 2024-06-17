@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maelstrom Coin</title>
+    <title>Maelstrom Coin Game</title>
     <style>
         body {
             display: flex;
@@ -12,15 +12,23 @@
             height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
+            position: relative;
         }
         canvas {
             border: 2px solid #000;
             background-color: #fff;
         }
+        #points {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+        }
     </style>
 </head>
 <body>
     <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div id="points">Points: 0</div>
     <script src="app.js"></script>
 </body>
 </html>
