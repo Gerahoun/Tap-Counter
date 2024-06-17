@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin the Wheel Game</title>
+    <style>
+        #circle {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+    <script>
+        const circle = document.getElementById('circle');
+        let isDragging = false;
+        let lastAngle = 0;
+
+        circle.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            lastAngle = getAngle(e.clientX, e.clientY);
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const newAngle = getAngle(e.clientX, e.clientY);
+            const angleDiff = newAngle - lastAngle;
+            const currentRotation = getRotation(circle);
+            circle.style.transform = `translate(-50%, -50%) rotate(${currentRotation + angleDiff}deg)`;
+            lastAngle = newAngle;
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        function getAngle(x, y) {
+            const rect = circle.getBoundingClientRect();
+            const circleX = rect.left + rect.width / 2;
+            const circleY = rect.top + rect.height / 2;
+            return Math.atan2(y - circleY, x - circleX) * (180 / Math.PI);
+        }
+
+        function getRotation(element) {
+            const st = window.getComputedStyle(element, null);
+            const tr = st.getPropertyValue("transform");
+            if (tr === "none") return 0;
+            const values = tr.split('(')[1].split(')')[0].split(',');
+            const a = values[0];
+            const b = values[1];
+            const angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
+            return angle < 0 ? angle + 360 : angle;
+        }
+    </script>
+</body>
+</html>
