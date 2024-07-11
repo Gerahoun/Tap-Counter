@@ -32,7 +32,7 @@ body, html {
 /* Coin styling */
 .coin {
     position: absolute;
-    top: 42%; /* Adjust to move the coin much higher */
+    top: 30%; /* Adjust to move the coin much higher */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px; /* Increase size of the coin */
