@@ -21,7 +21,7 @@ body, html {
 /* Main coin styling */
 .coin {
     position: absolute;
-    top: 30%; /* Adjusted higher */
+    top: 35%; /* Adjusted higher */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px; /* Increase size of the coin */
@@ -39,7 +39,7 @@ body, html {
     top: 25%; /* Adjusted higher */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 48px; /* Larger font size */
+    font-size: 64px; /* Larger font size */
     font-weight: 500; /* Poppins Medium */
     color: white; /* Text color */
 }
