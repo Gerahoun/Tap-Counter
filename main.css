@@ -11,10 +11,11 @@ body, html {
     position: relative;
     width: 100%;
     height: 100vh; /* Full height of the viewport */
-    background-image: url('example.jpg'); /* Replace with a test image path */
+    background-image: url('Frame 1.svg'); /* Replace with your SVG file path */
     background-size: cover; /* Cover the entire container */
     background-position: center;
     background-repeat: no-repeat;
+    background-color: #f0f0f0; /* Fallback background color */
 }
 
 /* Content container (optional) */
@@ -26,4 +27,19 @@ body, html {
     text-align: center;
     color: #fff; /* Example text color */
     padding: 20px;
+}
+
+/* Coin styling */
+.coin {
+    position: absolute;
+    top: 40%; /* Adjust to move the coin slightly up */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px; /* Adjust size as needed */
+    transition: transform 0.1s ease-in-out; /* Smooth transition */
+}
+
+/* Animation when tapped */
+.coin:active {
+    transform: translate(-50%, -50%) scale(0.9); /* Scale down on tap */
 }
