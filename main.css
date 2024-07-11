@@ -29,7 +29,7 @@ body, html {
     padding: 20px;
 }
 
-/* Coin styling */
+/* Main coin styling */
 .coin {
     position: absolute;
     top: 30%; /* Adjust to move the coin much higher */
@@ -42,4 +42,22 @@ body, html {
 /* Animation when tapped */
 .coin:active {
     transform: translate(-50%, -50%) scale(0.9); /* Scale down on tap */
+}
+
+/* New coins container */
+.coins-container {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* New coins styling */
+.new-coin {
+    width: 50px; /* Adjust size as needed */
+    margin-top: 10px; /* Spacing between coins */
+    transition: transform 0.1s ease-in-out; /* Smooth transition */
 }
