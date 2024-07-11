@@ -41,13 +41,13 @@ body, html {
 
 /* Animation when tapped */
 .coin:active {
-    transform: translate(-50%, -50%) scale(0.9); /* Scale down on tap */
+    transform: translate(-50%, -50%) scale(0.95); /* Scale down on tap */
 }
 
 /* New coins container */
 .coins-container {
     position: absolute;
-    top: 15%;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -60,4 +60,17 @@ body, html {
     width: 50px; /* Adjust size as needed */
     margin-top: 10px; /* Spacing between coins */
     transition: transform 0.1s ease-in-out; /* Smooth transition */
+}
+
+/* Coin counter styling */
+.coin-counter {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 10px; /* Rounded corners */
 }
