@@ -18,21 +18,10 @@ body, html {
     background-color: #f0f0f0; /* Fallback background color */
 }
 
-/* Content container (optional) */
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff; /* Example text color */
-    padding: 20px;
-}
-
 /* Main coin styling */
 .coin {
     position: absolute;
-    top: 25%; /* Adjust to move the coin much higher */
+    top: 30%; /* Move the coin higher */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px; /* Increase size of the coin */
@@ -41,34 +30,16 @@ body, html {
 
 /* Animation when tapped */
 .coin:active {
-    transform: translate(-50%, -50%) scale(0.95); /* Scale down on tap */
-}
-
-/* New coins container */
-.coins-container {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* New coins styling */
-.new-coin {
-    width: 50px; /* Adjust size as needed */
-    margin-top: 10px; /* Spacing between coins */
-    transition: transform 0.1s ease-in-out; /* Smooth transition */
+    transform: translate(-50%, -50%) scale(0.9); /* Scale down on tap */
 }
 
 /* Coin counter styling */
 .coin-counter {
     position: absolute;
-    top: 10px; /* Adjust as needed */
+    top: 10%; /* Adjust as needed */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 24px;
+    font-size: 48px; /* Larger font size */
     color: white; /* Text color */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     padding: 10px 20px;
