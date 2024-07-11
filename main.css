@@ -36,10 +36,10 @@ body, html {
 /* Coin counter styling */
 .coin-counter {
     position: absolute;
-    top: 20%; /* Adjusted higher */
+    top: 25%; /* Adjusted higher */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 64px; /* Larger font size */
+    font-size: 48px; /* Larger font size */
     font-weight: 500; /* Poppins Medium */
     color: white; /* Text color */
 }
