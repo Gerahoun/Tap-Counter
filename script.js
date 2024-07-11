@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const mainCoin = document.getElementById('main-coin');
     const coinsContainer = document.getElementById('coins-container');
+    const coinCounter = document.getElementById('coin-counter');
+    let coinCount = 0;
 
     mainCoin.addEventListener('click', function() {
         // Animate the main coin
@@ -17,5 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Append the new coin to the container
         coinsContainer.appendChild(newCoin);
+
+        // Update the coin counter
+        coinCount++;
+        coinCounter.textContent = `Coins: ${coinCount}`;
     });
 });
