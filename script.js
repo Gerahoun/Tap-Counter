@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const mainCoin = document.getElementById('main-coin');
-    const coinsContainer = document.getElementById('coins-container');
     const coinCounter = document.getElementById('coin-counter');
-    let coinCount = 0;
+
+    // Retrieve saved coin count from local storage, or start at 0
+    let coinCount = localStorage.getItem('coinCount') ? parseInt(localStorage.getItem('coinCount')) : 0;
+    coinCounter.textContent = coinCount;
 
     mainCoin.addEventListener('click', function() {
         // Animate the main coin
@@ -11,17 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
             mainCoin.style.transform = 'translate(-50%, -50%) scale(1)';
         }, 100); // Duration of the scale down effect
 
-        // Create a new coin element
-        const newCoin = document.createElement('img');
-        newCoin.src = 'Fake Coin Button.svg'; // Path to the coin image
-        newCoin.alt = 'New Coin';
-        newCoin.classList.add('new-coin');
-
-        // Append the new coin to the container
-        coinsContainer.appendChild(newCoin);
-
         // Update the coin counter
         coinCount++;
-        coinCounter.textContent = `Coins: ${coinCount}`;
+        coinCounter.textContent = coinCount;
+
+        // Save the new coin count to local storage
+        localStorage.setItem('coinCount', coinCount);
     });
 });
