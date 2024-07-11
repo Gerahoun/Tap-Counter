@@ -3,16 +3,16 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow: hidden; /* Prevent scrolling */
 }
 
 /* Container for background and content */
 .background-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh; /* Full height of the viewport */
     background-image: url('Frame 1.svg'); /* Replace with your SVG file path */
-    background-size: contain; /* Ensure entire SVG is visible */
+    background-size: cover; /* Cover the entire container */
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -26,25 +26,4 @@ body, html {
     text-align: center;
     color: #fff; /* Example text color */
     padding: 20px;
-}
-
-/* Ensure the background maintains its aspect ratio */
-@media (max-aspect-ratio: 16/9) {
-    .background-container {
-        height: 100vh;
-        width: calc(100vh * 16 / 9);
-    }
-}
-
-@media (min-aspect-ratio: 16/9) {
-    .background-container {
-        width: 100vw;
-        height: calc(100vw * 9 / 16);
-    }
-}
-
-/* Additional styling for your content */
-.content h1 {
-    font-size: 2rem;
-    /* Adjust other styles as needed */
 }
