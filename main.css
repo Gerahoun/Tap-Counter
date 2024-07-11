@@ -23,7 +23,7 @@ body, html {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(300%, -50%);
     text-align: center;
     color: #fff; /* Example text color */
     padding: 20px;
@@ -34,7 +34,7 @@ body, html {
     position: absolute;
     top: 50%; /* Adjust to move the coin slightly up */
     left: 50%;
-    transform: translate(100%, -50%);
+    transform: translate(300%, -50%);
     width: 400px; /* Adjust size as needed */
     transition: transform 0.01s ease-in-out; /* Smooth transition */
 }
