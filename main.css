@@ -21,7 +21,7 @@ body, html {
 /* Content container (optional) */
 .content {
     position: absolute;
-    top: 300%;
+    top: 150%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -32,7 +32,7 @@ body, html {
 /* Coin styling */
 .coin {
     position: absolute;
-    top: 300%; /* Adjust to move the coin slightly up */
+    top: 50%; /* Adjust to move the coin slightly up */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 750px; /* Adjust size as needed */
