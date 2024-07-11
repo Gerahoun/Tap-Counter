@@ -21,7 +21,7 @@ body, html {
 /* Main coin styling */
 .coin {
     position: absolute;
-    top: 30%; /* Adjusted higher */
+    top: 25%; /* Adjusted position */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px; /* Increase size of the coin */
@@ -36,7 +36,7 @@ body, html {
 /* Coin counter styling */
 .coin-counter {
     position: absolute;
-    top: 20%; /* Adjusted higher */
+    top: 15%; /* Adjusted position */
     left: 50%;
     transform: translateX(-50%);
     font-size: 48px; /* Larger font size */
