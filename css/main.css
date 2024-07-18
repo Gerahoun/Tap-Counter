@@ -1,46 +1,45 @@
-/* Background container styling */
+/* Reset default browser styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Container for background and content */
 .background-container {
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('../images/Frame 1.svg');
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
     width: 100%;
-    height: 100%;
-    overflow: hidden; /* Prevents scrolling within the container */
-    position: relative; /* Allows absolute positioning of child elements */ 
+    height: 100vh; /* Full height of the viewport */
+    background-image: url('Frame 1.svg'); /* Replace with your SVG file path */
+    background-size: cover; /* Cover the entire container */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f0f0f0; /* Fallback background color */
 }
 
 /* Main coin styling */
 .coin {
     position: absolute;
-    top: 35%;
+    top: 35%; /* Adjusted position */
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 350px; /* Adjust this size as necessary */
-    transition: transform 0.05s ease-in-out;
+    width: 350px; /* Size of the coin */
+    transition: transform 0.001s ease-in-out; /* Faster transition */
+}
+
+/* Animation when tapped */
+.coin:active {
+    transform: translate(-50%, -50%) scale(0.95); /* Scale down on tap */
 }
 
 /* Coin counter styling */
 .coin-counter {
     position: absolute;
-    top: 10%;
+    top: 10%; /* Adjusted higher */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 48px; /* Adjust this size as necessary */
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    color: white;
-}
-
-/* Prevent zooming on mobile devices */
-html {
-    touch-action: pan-x pan-y; /* Disables pinch-to-zoom and double-tap zooming */
-    -ms-touch-action: pan-x pan-y; /* For older IE/Edge */
-}
-
-body {
-    overflow: hidden; /* Optional: Prevents scrolling if you don't want users to scroll */
+    font-size: 48px; /* Larger font size */
+    font-weight: 500; /* Poppins Medium */
+    color: white; /* Text color */
 }
