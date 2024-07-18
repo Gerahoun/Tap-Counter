@@ -1,43 +1,17 @@
-/* Reset default browser styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden; /* Prevent scrolling */
-}
-
-/* Container for background and content */
-.background-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full height of the viewport */
-    background-image: url('Frame 1.svg'); /* Replace with your SVG file path */
-    background-size: cover; /* Cover the entire container */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #f0f0f0; /* Fallback background color */
-}
-
 /* Main coin styling */
 .coin {
     position: absolute;
-    top: 35%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 350px;
     transition: transform 0.05s ease-in-out;
 }
 
-
-/* Animation when tapped */
-.coin:active {
-    transform: translate(-50%, -50%) scale(0.9); /* Scale down on tap */
-}
-
 /* Coin counter styling */
 .coin-counter {
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 64px;
@@ -48,21 +22,21 @@ body, html {
 /* Progress bar container */
 .progress-container {
     position: absolute;
-    top: 60%; /* Adjusted position below the coin */
+    top: 65%; /* Adjusted position below the coin */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
     height: 50px;
-} 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* Tank styling */
 .tank {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
-    background: none;
-    border: 2px solid black;
-    border-radius: 25px;
 }
 
 /* Bar styling */
@@ -70,7 +44,5 @@ body, html {
     position: absolute;
     width: 0%; /* Initially empty */
     height: 100%;
-    background: linear-gradient(to right, yellow, orange);
-    border-radius: 25px;
     transition: width 0.5s; /* Smooth transition for filling the bar */
 }
