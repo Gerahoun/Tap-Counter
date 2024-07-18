@@ -12,17 +12,17 @@
 /* Main coin styling */
 .coin {
     position: absolute;
-    top: 45%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 150px; /* Adjust this size as necessary */
+    width: 350px; /* Adjust this size as necessary */
     transition: transform 0.05s ease-in-out;
 }
 
 /* Coin counter styling */
 .coin-counter {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 48px; /* Adjust this size as necessary */
