@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     mainCoin.addEventListener('click', function() {
         if (!animating) {
             animating = true;
-            mainCoin.style.transform = 'translate(-50%, -50%) scale(0.9)';
+            mainCoin.style.transform = 'translate(-50%, -50%) scale(0.95)';
             setTimeout(function() {
                 mainCoin.style.transform = 'translate(-50%, -50%) scale(1)';
                 animating = false;
