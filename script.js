@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const mainCoin = document.getElementById('main-coin');
     const coinCounter = document.getElementById('coin-counter');
-    const progressBar = document.getElementById('progress-bar');
+    const progressBar = document.getElementById('progress-bar').contentDocument.querySelector('rect');
     let animating = false;
 
     // Retrieve saved coin count from local storage, or start at 0
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update progress bar
         const progress = (coinCount % tapsForNextLevel) / tapsForNextLevel * 100;
-        progressBar.style.width = `${progress}%`;
+        progressBar.setAttribute('width', `${progress}%`);
 
         // Check if level up
         if (coinCount % tapsForNextLevel === 0) {
