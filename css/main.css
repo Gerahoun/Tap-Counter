@@ -30,3 +30,13 @@
     font-weight: 500;
     color: white;
 }
+
+/* Prevent zooming on mobile devices */
+html {
+    touch-action: pan-x pan-y; /* Disables pinch-to-zoom and double-tap zooming */
+    -ms-touch-action: pan-x pan-y; /* For older IE/Edge */
+}
+
+body {
+    overflow: hidden; /* Optional: Prevents scrolling if you don't want users to scroll */
+}
