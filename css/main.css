@@ -3,10 +3,11 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-image: url('images/Frame 1.svg');
+    background-image: url('../images/Frame 1.svg');
     background-size: cover;
     background-position: center;
     overflow: hidden;
+}
 }
 
 /* Main coin styling */
