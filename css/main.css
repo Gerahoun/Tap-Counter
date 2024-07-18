@@ -1,0 +1,32 @@
+/* Background container styling */
+.background-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/Frame 1.svg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Main coin styling */
+.coin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    transition: transform 0.05s ease-in-out;
+}
+
+/* Coin counter styling */
+.coin-counter {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 64px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: white;
+}
