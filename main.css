@@ -43,3 +43,18 @@ body, html {
     font-weight: 500; /* Poppins Medium */
     color: white; /* Text color */
 }
+
+/* Tank styling */
+.tank {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Bar styling */
+.bar {
+    position: absolute;
+    width: 0%; /* Initially empty */
+    height: 100%;
+    transition: width 0.5s; /* Smooth transition for filling the bar */
+}
