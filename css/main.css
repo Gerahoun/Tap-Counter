@@ -46,7 +46,7 @@ body, html {
 
 @font-face {
     font-family: 'MorabbaHeavy'; /* You can give it any name */
-    src: url('../Morabba-heavy.ttf') format('truetype'); /* Adjust the path to the root folder */
+    src: url('../Morabba-Heavy.ttf') format('truetype'); /* Adjust the path to the root folder */
     font-weight: normal;
     font-style: normal;
 }
