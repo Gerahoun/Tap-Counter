@@ -8,7 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const messages = [
         "بی ادب",
         "برو بهش بگو ببخشید",
-        "واقعا اذیتش کردی؟"
+        "بی ادب",
+        ")':",
+        "واسه چی اینجوری کردی",
+        "برو از دلش دربیار",
+        "گناه داشت",
+        "اونم یه روز تلافی میکنه ، حالا ببین",
+        "کارت زشت بود ولی",
+        "یزیدی چون که",
+        "میدونستی ناراحت شد؟",
+        "بازم اذیتش کردی؟"
     ];
 
     // Retrieve saved coin count from local storage, or start at 0
