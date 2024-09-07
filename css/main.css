@@ -43,3 +43,14 @@ body, html {
     font-weight: 500; /* Poppins Medium */
     color: white; /* Text color */
 }
+
+/* Message styling */
+#message {
+    position: absolute;
+    top: 80%; /* Position it under the coin */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px; /* Adjust font size */
+    color: white;
+    text-align: center;
+}
