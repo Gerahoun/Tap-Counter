@@ -54,10 +54,10 @@ body, html {
 /* Apply the font to the message */
 #message {
     position: absolute;
-    top: 70%; /* Position it under the coin */
+    top: 75%; /* Position it under the coin */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 18px; /* Adjust font size */
+    font-size: 21px; /* Adjust font size */
     color: white;
     text-align: center;
     font-family: 'MorabbaHeavy', sans-serif; /* Use your custom font */
