@@ -16,27 +16,27 @@ document.addEventListener('DOMContentLoaded', function() {
     coinCounter.textContent = coinCount;
 
     mainCoin.addEventListener('click', function() {
-        if (!animating) {
-            // Animate the main coin
-            animating = true;
-            mainCoin.style.transform = 'translate(-50%, -50%) scale(0.9)';
-            setTimeout(function() {
-                mainCoin.style.transform = 'translate(-50%, -50%) scale(1)';
-                animating = false;
-            }, 50); // Faster animation duration
-        }
+    if (!animating) {
+        // Animate the main coin
+        animating = true;
+        mainCoin.style.transform = 'translate(-50%, -50%) scale(0.9)';
+        setTimeout(function() {
+            mainCoin.style.transform = 'translate(-50%, -50%) scale(1)';
+            animating = false;
+        }, 50); // Faster animation duration
+    }
 
-        // Update the coin counter
-        coinCount++;
-        coinCounter.textContent = coinCount;
+    // Update the coin counter
+    coinCount++;
+    coinCounter.textContent = coinCount;
 
-        // Save the new coin count to local storage
-        saveCoinCount(coinCount); // Save coin count using storage.js
+    // Save the new coin count to local storage
+    saveCoinCount(coinCount);
 
-        // Change the message randomly (excluding the first "واقعا اذیتش کردی؟" message)
-        const randomIndex = Math.floor(Math.random() * (messages.length - 1)) + 1; // Exclude index 0
-        message.textContent = messages[randomIndex];
-    });
+    // Change the message randomly (excluding the initial message)
+    const randomIndex = Math.floor(Math.random() * (messages.length - 1)) + 1; // Random from index 1 onwards
+    message.textContent = messages[randomIndex];
+});
 
     // Reset message when the page is reloaded
     window.addEventListener('beforeunload', () => {
