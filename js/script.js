@@ -49,3 +49,12 @@ document.addEventListener('DOMContentLoaded', function() {
         message.textContent = messages[0]; // Reset to the first message
     }
 });
+
+// Functions to save and retrieve the coin count from local storage
+function saveCoinCount(count) {
+    localStorage.setItem('coinCount', count);
+}
+
+function getCoinCount() {
+    return localStorage.getItem('coinCount') ? parseInt(localStorage.getItem('coinCount')) : 0;
+}
