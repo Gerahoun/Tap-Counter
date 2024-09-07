@@ -1,7 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
     const mainCoin = document.getElementById('main-coin');
     const coinCounter = document.getElementById('coin-counter');
+    const message = document.getElementById('message');
     let animating = false;
+
+    // Define the messages
+    const messages = [
+        "بی ادب",
+        ")':",
+        "میری جهنم",
+        "خدا دوست نداره",
+        "گناه داشت",
+        "ناراحت شد",
+        "چطور دلت اومد؟",
+        "یزیدی چون که",
+        "برو بهش بگو ببخشید",
+        "واقعا اذیتش کردی؟"
+    ];
 
     // Retrieve saved coin count from local storage, or start at 0
     let coinCount = getCoinCount(); // Fetch coin count from storage.js
@@ -24,5 +39,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Save the new coin count to local storage
         saveCoinCount(coinCount); // Save coin count using storage.js
+
+        // Change the message randomly (excluding the first "واقعا اذیتش کردی؟" message)
+        const randomIndex = Math.floor(Math.random() * (messages.length - 1)) + 1; // Exclude index 0
+        message.textContent = messages[randomIndex];
     });
+
+    // Reset message when the page is reloaded
+    window.addEventListener('beforeunload', () => {
+        localStorage.setItem('pageReloaded', 'true');
+    });
+
+    // Check if the page was reloaded and reset the message
+    if (localStorage.getItem('pageReloaded')) {
+        localStorage.removeItem('pageReloaded');
+        message.textContent = messages[0]; // Reset to the first message
+    }
 });
