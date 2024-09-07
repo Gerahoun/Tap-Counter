@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
         "اونم یه روز تلافی میکنه ، حالا ببین",
         "کارت زشت بود ولی",
         "یزیدی چون که",
-        "میدونستی ناراحت شد؟",
-        "بازم اذیتش کردی؟"
+        "میدونستی ناراحت شد؟"
+       
     ];
 
     // Retrieve saved coin count from local storage, or start at 0
