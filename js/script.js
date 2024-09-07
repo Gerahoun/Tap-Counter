@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Define the messages
     const messages = [
-        "بازم اذیتش کردی؟"
+        "بازم اذیتش کردی؟" ,
         "بی ادب",
         "برو بهش بگو ببخشید",
         "میری جهنم",
