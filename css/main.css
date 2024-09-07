@@ -44,13 +44,21 @@ body, html {
     color: white; /* Text color */
 }
 
-/* Message styling */
+@font-face {
+    font-family: 'MorabbaHeavy'; /* You can give it any name */
+    src: url('../Morabba-heavy.ttf') format('truetype'); /* Adjust the path to the root folder */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply the font to the message */
 #message {
     position: absolute;
-    top: 80%; /* Position it under the coin */
+    top: 70%; /* Position it under the coin */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 24px; /* Adjust font size */
+    font-size: 18px; /* Adjust font size */
     color: white;
     text-align: center;
+    font-family: 'MorabbaHeavy', sans-serif; /* Use your custom font */
 }
