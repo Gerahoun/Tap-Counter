@@ -21,7 +21,7 @@ body, html {
 /* Main coin styling */
 .coin {
     position: absolute;
-    top: 0%; /* Adjusted position */
+    top: 35%; /* Adjusted position */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px; /* Size of the coin */
