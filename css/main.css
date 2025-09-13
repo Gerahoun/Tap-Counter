@@ -59,6 +59,16 @@ body, html {
 
 
 #message {
+
+ position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    font-family: 'Bitcount Grid Double', sans-serif;
+
 .bitcount-grid-double-<uniquifier> {
   font-family: "Bitcount Grid Double", system-ui;
     /* src: url('../Bitcount Grid Double.ttf') format('truetype'); */
@@ -69,12 +79,5 @@ body, html {
     "CRSV" 0.5,
     "ELSH" 0,
     "ELXP" 0;   
- position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 32px;
-    color: white;
-    text-align: center;
-    font-family: 'Bitcount Grid Double', sans-serif;
+}
 }
