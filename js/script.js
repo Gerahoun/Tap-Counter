@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
         "TAP TAP TAP!" ,
         "You are wasting your time btw.",
         "STOP!",
-        "This is fake.",
-        "؟"
+        "This is fake."
+        
     ];
 
     let coinCount = getCoinCount();
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     mainCoin.addEventListener('click', function() {
         if (!animating) {
             animating = true;
-            mainCoin.style.transform = 'translate(-50%, -50%) scale(0.9)';
+            mainCoin.style.transform = 'translate(-50%, -50%) scale(0.95)';
             setTimeout(function() {
                 mainCoin.style.transform = 'translate(-50%, -50%) scale(1)';
                 animating = false;
