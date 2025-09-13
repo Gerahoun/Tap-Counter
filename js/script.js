@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         message.textContent = messages[0];
     }
 
-    // Coin click event listener
+    
     mainCoin.addEventListener('click', function() {
         if (!animating) {
             animating = true;
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         coinCounter.textContent = coinCount;
         saveCoinCount(coinCount);
 
-        // Change the message randomly, excluding the first message
+     
         const randomIndex = Math.floor(Math.random() * (messages.length - 1)) + 1;
         message.textContent = messages[randomIndex];
     });
