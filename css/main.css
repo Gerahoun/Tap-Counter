@@ -59,7 +59,17 @@ body, html {
 
 
 #message {
-    position: absolute;
+.bitcount-grid-double-<uniquifier> {
+  font-family: "Bitcount Grid Double", system-ui;
+    /* src: url('../Bitcount Grid Double.ttf') format('truetype'); */
+    font-weight: normal;
+    font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;   
+ position: absolute;
     top: 75%;
     left: 50%;
     transform: translateX(-50%);
