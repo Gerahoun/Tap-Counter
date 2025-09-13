@@ -4,41 +4,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const message = document.getElementById('message');
     let animating = false;
 
-    // Define the messages
     const messages = [
-        "واقعا اذیتش کردی؟",  // Initial message
-        "بازم اذیتش کردی؟" ,
-        "بی ادب",
-        "برو بهش بگو ببخشید",
-        "عجب آدمی هستی",
-        "میری جهنم",
-        ")':",
-        "جای اینکارا برو زبان بخون",
-        "مهاجرتت مهم تر بود یا اذیت کردنش؟",
-        "شمیاد",
-        "بهت اعتماد کرده بود نامرد",
-        "خدا دوست نداره",
-        "خوشحالی الان؟",
-        "واسه چی اینجوری کردی",
-        "برو از دلش دربیار",
-        "گناه داشت",
-        "اونم یه روز تلافی میکنه ، حالا ببین",
-        "کارت زشت بود ولی",
-        "یزیدی چون که",
-        "میدونستی ناراحت شد؟"
+        "Go ON!",
+        "TAP TAP TAP!" ,
+        "You are wasting your time btw.",
+        "STOP!",
+        "This is fake.",
+        "؟"
     ];
 
-    // Retrieve saved coin count from local storage, or start at 0
     let coinCount = getCoinCount();
     coinCounter.textContent = coinCount;
 
-    // Set initial message on load
+
     let wasPageReloaded = localStorage.getItem('pageReloaded') === 'true';
     if (wasPageReloaded) {
-        message.textContent = messages[0];  // Reset to initial message on reload
-        localStorage.removeItem('pageReloaded');  // Clear reload flag
+        message.textContent = messages[0]; 
+        localStorage.removeItem('pageReloaded'); 
     } else {
-        message.textContent = messages[0];  // Set the first message initially
+        message.textContent = messages[0];
     }
 
     // Coin click event listener
@@ -52,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 50);
         }
 
-        // Increment and update coin counter
+      
         coinCount++;
         coinCounter.textContent = coinCount;
         saveCoinCount(coinCount);
@@ -62,13 +46,13 @@ document.addEventListener('DOMContentLoaded', function() {
         message.textContent = messages[randomIndex];
     });
 
-    // Before page unload, mark that the page was reloaded
+
     window.addEventListener('beforeunload', () => {
         localStorage.setItem('pageReloaded', 'true');
     });
 });
 
-// Functions to save and retrieve the coin count from local storage
+
 function saveCoinCount(count) {
     localStorage.setItem('coinCount', count);
 }
