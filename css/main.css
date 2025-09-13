@@ -44,10 +44,17 @@ body, html {
 }
 
 @font-face {
-    font-family: 'Facile-Sans';
-    src: url('../Facile-Sans.ttf') format('truetype');
+  .bitcount-grid-double-<uniquifier> {
+  font-family: "Bitcount Grid Double", system-ui;
+    /* src: url('../Bitcount Grid Double.ttf') format('truetype'); */
     font-weight: normal;
     font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
 }
 
 
@@ -59,5 +66,5 @@ body, html {
     font-size: 21px;
     color: white;
     text-align: center;
-    font-family: 'Facile-Sans', sans-serif;
+    font-family: 'Bitcount Grid Double', sans-serif;
 }
